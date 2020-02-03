@@ -1,0 +1,17 @@
+:root{
+    --fontsize: $font-size-medium;
+    --lineheight: $line-height-medium;
+
+    @media(min-width: 40rem){
+        --fontsize: $font-size-large;
+        --lineheight: $line-height-large;
+    }
+}
+
+body{
+    font: $font-size-medium / $line-height-medium $font-primary;
+    font-size: var(--fontsize, $font-size-medium);
+    line-height: var(--lineheight, $line-height-large);
+    color: $c-font-base;
+}
+
