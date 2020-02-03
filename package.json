@@ -1,0 +1,31 @@
+{
+  "name": "css-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "gulp": "gulp",
+    "style": "gulp style"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bhenbe/boilerplate-css.git"
+  },
+  "author": "bhen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bhenbe/boilerplate-css/issues"
+  },
+  "homepage": "https://github.com/bhenbe/boilerplate-css#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "autoprefixer": "^9.7.4",
+    "cssnano": "^4.1.10",
+    "gulp": "^4.0.2",
+    "gulp-cli": "^2.2.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sass-glob": "^1.1.0",
+    "gulp-sourcemaps": "^2.6.5"
+  }
+}
