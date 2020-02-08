@@ -9,10 +9,11 @@ const gulp = require("gulp"),
 var paths = {
   styles: {
       src: "scss/styles.scss",
+      watch: "scss/**/*.scss",
       dest: "css"
   }
 };
-	
+    
 function style() {
   return (
       gulp
@@ -28,8 +29,21 @@ function style() {
 }
 
 function watch(){
-  gulp.watch(paths.styles.src, style)
+  gulp.watch(paths.styles.watch, style)
 }
+
+// Server task
+gulp.task("serve", function(done) {
+    watch()
+});
+
+gulp.task(
+   "default",
+   gulp.series("serve", done => {
+      done();
+   })
+);
+
 
 // $ gulp watch
 exports.watch = watch
