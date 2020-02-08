@@ -13,6 +13,7 @@ var paths = {
   }
 };
 	
+    
 function style() {
   return (
       gulp
@@ -30,6 +31,19 @@ function style() {
 function watch(){
   gulp.watch(paths.styles.src, style)
 }
+
+// Server task
+gulp.task("serve", function(done) {
+    watch()
+});
+
+gulp.task(
+   "default",
+   gulp.series("serve", done => {
+      done();
+   })
+);
+
 
 // $ gulp watch
 exports.watch = watch
